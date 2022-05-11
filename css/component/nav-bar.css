@@ -1,0 +1,75 @@
+.nav__list{
+display: flex;
+justify-content: space-between;
+
+}
+.nav__link{
+    color:#2e363e;
+position: relative;
+}
+.nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9fa;
+    padding: 20px 50px;
+    border-top:1px solid rgba(0, 0, 0,0.1)
+}
+
+.status-bar{
+    position: fixed;
+    top:0;
+    width:100%;
+}
+
+@keyframes notificationAnimation{
+    0%{
+        transform: none;
+
+    }
+
+    50%{
+        transform: translateY(2px) rotateY(360deg);
+
+    }
+
+    100%{
+        transform: none;
+
+    }
+}
+
+.nav__notification{
+    position: absolute;
+    left:12px;
+    bottom:9px;
+    animation: notificationAnimation 1s ease-in-out;
+}
+
+.e__notification{
+    background-color: tomato;
+    width: 5px;
+    height:5px;
+    border-radius: 2.5px;
+    display: block;
+    position: absolute;
+    left: 20px;
+    bottom:20px;
+}
+
+@keyframes appearBtnAnimation{
+    from{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+.nav__btn{
+
+    animation: appearBtnAnimation 1s ease-in-out;
+}
